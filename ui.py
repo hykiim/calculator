@@ -59,8 +59,8 @@ class View(QWidget):
         self.resize(256, 256)
         self.show()
 
-    def setDisplay(self):  # 메서드 이름 변경
-        self.te1.appendPlainText("Button clicked!")
+    def setDisplay(self, text):  # 메서드 이름 변경
+        self.te1.appendPlainText(text)
 
     def clearMessage(self):  # 버튼2 핸들러 함수
         self.te1.clear()
