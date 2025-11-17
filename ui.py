@@ -27,7 +27,7 @@ class View(QWidget):
         self.le2.setAlignment(QtCore.Qt.AlignRight)  # 라인 에디트2 문자열 배치 설정
 
         self.cb = QComboBox(self)
-        self.cb.addItems(["+", "-", "*", "/", "^", "%", "//"])  # // 연산자 추가
+        self.cb.addItems(["+", "-", "*", "/", "^", "%"])  # % 연산자 추가
 
         self.te1 = QPlainTextEdit()  # 텍스트 에디트 위젯 생성
         self.te1.setReadOnly(True)  # 텍스트 에디트 위젯을 읽기만 하도록 수정
