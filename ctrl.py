@@ -8,8 +8,16 @@ class Control:
         num2 = float(self.view.le2.text())  # 두 번째 라인 에디트에 입력된 숫자를 읽어옴
         operator = self.view.cb.currentText()  # 콤포 박스에 선택된 연산자 확인
 
-        if operator == "+":  # 연산자가 '+'이면 덧셈 결과를 문자열로 리턴
+        if operator == "+":
             return f"{num1} + {num2} = {self.sum(num1, num2)}"
+        elif operator == "-":
+            return f"{num1} - {num2} = {self.sub(num1, num2)}"
+        elif operator == "*":
+            return f"{num1} * {num2} = {self.mul(num1, num2)}"
+        elif operator == "/":
+            return f"{num1} / {num2} = {self.div(num1, num2)}"
+        elif operator == "^":
+            return f"{num1} ^ {num2} = {self.pow(num1, num2)}"
         else:
             return "Calculation Error"
 
