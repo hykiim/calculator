@@ -16,10 +16,6 @@ class Control:
             return f"{num1} * {num2} = {self.mul(num1, num2)}"
         elif operator == "/":
             return f"{num1} / {num2} = {self.div(num1, num2)}"
-        elif operator == "^":
-            return f"{num1} ^ {num2} = {self.pow(num1, num2)}"
-        elif operator == "%":  # '%'를 입력했을 때 mod 연산 결과를 출력하도록 추가
-            return f"{num1} % {num2} = {self.mod(num1, num2)}"
         else:
             return "Calculation Error"
 
@@ -43,19 +39,3 @@ class Control:
         except Exception as e:
             return e
         return a / b
-
-    def pow(self, a, b):  # 예외 처리를 사용하도록 수정
-        try:
-            if a == 0:
-                raise Exception("Base Error")
-        except Exception as e:
-            return e
-        return pow(a, b)
-
-    def mod(self, a, b):  # 나눗셈 연사의 나머지를 리턴하는 함수 추가
-        try:
-            if b == 0:
-                raise Exception("Divisor Error")
-        except Exception as e:
-            return e
-        return a % b
